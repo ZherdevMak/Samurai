@@ -1,0 +1,37 @@
+
+
+.setOn {
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.on {
+    width: 70px;
+    border: #000000 1px solid;
+    margin: 2px;
+}
+.off {
+    width: 70px;
+    border: #000000 1px solid;
+    margin: 2px;
+}
+
+
+.lampgreen {
+    width: 30px;
+    border-radius: 50%;
+    background-color: green;
+}
+.lampred {
+    width: 30px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.on.active {
+    background-color: green;
+}
+.off.active{
+    background-color: red;
+}

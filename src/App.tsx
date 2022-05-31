@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Accordion from './components/Accordion';
 import {Rating} from "./components/Rating";
+import {OnOff} from "./components/OnOFF/OnOff";
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
             {/*<PageTitle title ={"My friends"}/>*/}
             {/*Article 1*/}
             {/*<Rating value={3} />*/}
+            <OnOff position={false}/>
             <Accordion title={"My Accordion"} collapsed={true} />
             <Accordion title={"My friend"} collapsed={false} />
             {/*Article 2*/}
