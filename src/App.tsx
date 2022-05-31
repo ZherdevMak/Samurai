@@ -6,13 +6,13 @@ import {Rating} from "./components/Rating";
 function App() {
     return (
         <div>
-            <PageTitle title ={"This is APP component"}/>
-            <PageTitle title ={"My friends"}/>
-            Article 1
-            <Rating value={3} />
-            <Accordion title={"My Accordion"} collapsed={false} />
+            {/*<PageTitle title = {"This is APP component"}/>*/}
+            {/*<PageTitle title ={"My friends"}/>*/}
+            {/*Article 1*/}
+            {/*<Rating value={3} />*/}
+            <Accordion title={"My Accordion"} collapsed={true} />
             <Accordion title={"My friend"} collapsed={false} />
-            Article 2
+            {/*Article 2*/}
             <Rating value={0} />
             <Rating value={1} />
             <Rating value={2} />
@@ -23,7 +23,7 @@ function App() {
     );
 }
 type PageTitlePropsType = {
-    type: string
+    title: string
 }
 function PageTitle(props: PageTitlePropsType) {
     return <h1>{props.title}</h1>
