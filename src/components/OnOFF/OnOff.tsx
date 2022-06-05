@@ -3,7 +3,9 @@ import * as React from 'react';
 import  stl from './Tab.module.css'
 
 type OnOffProps = {
-    position: boolean
+    position: boolean,
+    ToggleOn: () => void,
+    ToggleOff: ()=> void
 };
 
 export const OnOff = (props: OnOffProps) => {
@@ -20,8 +22,8 @@ export const OnOff = (props: OnOffProps) => {
     }
     return (
         <div className={stl.setOn}>
-            <div className={onLight}>ON</div>
-            <div className={offLight}>OFF</div>
+            <div onClick={props.ToggleOn} className={onLight}>ON</div>
+            <div onClick={props.ToggleOff} className={offLight}>OFF</div>
             <div className={lampColor}></div>
         </div>
     );

@@ -1,17 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Accordion from './components/Accordion';
 import {Rating} from "./components/Rating";
 import {OnOff} from "./components/OnOFF/OnOff";
 
 function App() {
+    let [position, setPosition] = useState<boolean>(false)
+    const ToggleOn = ()=> {setPosition(true)}
+    const ToggleOff = ()=> {setPosition(false)}
     return (
         <div>
             {/*<PageTitle title = {"This is APP component"}/>*/}
             {/*<PageTitle title ={"My friends"}/>*/}
             {/*Article 1*/}
             {/*<Rating value={3} />*/}
-            <OnOff position={false}/>
+            <OnOff position={position} ToggleOn={ToggleOn} ToggleOff={ToggleOff} />
             <Accordion title={"My Accordion"} collapsed={true} />
             <Accordion title={"My friend"} collapsed={false} />
             {/*Article 2*/}
