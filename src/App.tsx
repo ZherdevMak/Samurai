@@ -4,6 +4,8 @@ import Accordion from './components/Accordion';
 import {Rating, ValueType} from "./components/Rating";
 import {OnOff} from "./components/OnOFF/OnOff";
 import {UncontrolledRating} from "./components/uncontrolledRating/uncontrolledRating";
+import {UncontrolledAccordion} from "./components/uncontrolledAccordion/UncontrolledAccordion";
+import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 function App() {
     let [collapsed, setCollapsed] = useState<boolean>(false)
@@ -19,8 +21,10 @@ function App() {
             {/*<PageTitle title ={"My friends"}/>*/}
             {/*Article 1*/}
             {/*<Rating value={3} />*/}
-            <OnOff position={position} ToggleOn={ToggleOn} ToggleOff={ToggleOff} />
-            <Accordion title={"My Accordion"} callBack={accordionCollapsed} collapsed = {collapsed} />
+            {/*<OnOff position={position} ToggleOn={ToggleOn} ToggleOff={ToggleOff} />*/}
+            <UncontrolledOnOff/>
+            {/*<Accordion title={"My Accordion"} callBack={accordionCollapsed} collapsed = {collapsed} />*/}
+            <UncontrolledAccordion title={"My UncontrolledAccordion"}/>
             {/*Article 2*/}
             {/*<UncontrolledRating />*/}
             <Rating value={value} callBack = {onClickFunction}/>
