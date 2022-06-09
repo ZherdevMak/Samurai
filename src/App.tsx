@@ -1,14 +1,18 @@
 import React, {useState} from 'react';
 import './App.css';
 import Accordion from './components/Accordion';
-import {Rating} from "./components/Rating";
+import {Rating, ValueType} from "./components/Rating";
 import {OnOff} from "./components/OnOFF/OnOff";
 import {UncontrolledRating} from "./components/uncontrolledRating/uncontrolledRating";
 
 function App() {
+    let [collapsed, setCollapsed] = useState<boolean>(false)
     let [position, setPosition] = useState<boolean>(false)
+    let [value, setValue] = useState<ValueType>(0)
+    const accordionCollapsed = ()=> {setCollapsed(!collapsed)}
     const ToggleOn = ()=> {setPosition(true)}
     const ToggleOff = ()=> {setPosition(false)}
+    const onClickFunction = (v: ValueType) => { setValue(v)}
     return (
         <div className={'App'}>
             {/*<PageTitle title = {"This is APP component"}/>*/}
@@ -16,10 +20,10 @@ function App() {
             {/*Article 1*/}
             {/*<Rating value={3} />*/}
             <OnOff position={position} ToggleOn={ToggleOn} ToggleOff={ToggleOff} />
-            <Accordion title={"My Accordion"} />
+            <Accordion title={"My Accordion"} callBack={accordionCollapsed} collapsed = {collapsed} />
             {/*Article 2*/}
-            <UncontrolledRating />
-            {/*<Rating value={0} />*/}
+            {/*<UncontrolledRating />*/}
+            <Rating value={value} callBack = {onClickFunction}/>
             {/*<Rating value={1} />*/}
             {/*<Rating value={2} />*/}
             {/*<Rating value={3} />*/}
