@@ -22,7 +22,7 @@ export const OnOff = (props: OnOffProps) => {
     }
     return (
         <div className={stl.setOn}>
-            <div onClick={props.ToggleOn} className={onLight}>ON</div>
+            <div onClick={(e)=>props.ToggleOn()} className={onLight}>ON</div>
             <div onClick={props.ToggleOff} className={offLight}>OFF</div>
             <div className={lampColor}></div>
         </div>
