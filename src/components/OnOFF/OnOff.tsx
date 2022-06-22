@@ -1,10 +1,10 @@
 // @flow
 import * as React from 'react';
 import  stl from './Tab.module.css'
-
+import {MouseEvent} from 'react'
 type OnOffProps = {
     position: boolean,
-    ToggleOn: () => void,
+    ToggleOn: (e:MouseEvent<HTMLDivElement> ) => void,
     ToggleOff: ()=> void
 };
 
@@ -22,7 +22,7 @@ export const OnOff = (props: OnOffProps) => {
     }
     return (
         <div className={stl.setOn}>
-            <div onClick={(e)=>props.ToggleOn()} className={onLight}>ON</div>
+            <div onClick={(e)=>props.ToggleOn(e)} className={onLight}>ON</div>
             <div onClick={props.ToggleOff} className={offLight}>OFF</div>
             <div className={lampColor}></div>
         </div>

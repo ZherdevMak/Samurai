@@ -6,6 +6,7 @@ import {Rating, ValueType} from "./components/Rating";
 import {UncontrolledRating} from "./components/uncontrolledRating/uncontrolledRating";
 import {UncontrolledAccordion} from "./components/uncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
+import Selector from "./components/Selector/Selector";
 
 function App() {
     let [collapsed, setCollapsed] = useState<boolean>(false)
@@ -33,7 +34,9 @@ function App() {
             {/*<Rating value={3} />*/}
             {/*<Rating value={4} />*/}
             {/*<Rating value={5} />*/}
+
         </div>
+
     );
 }
 type PageTitlePropsType = {
