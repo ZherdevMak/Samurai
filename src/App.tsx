@@ -1,12 +1,9 @@
 import React, {useState} from 'react';
 import './App.css';
-import Accordion from './components/Accordion';
 import {Rating, ValueType} from "./components/Rating";
-// import {OnOff} from "./components/OnOFF/OnOff";
-import {UncontrolledRating} from "./components/uncontrolledRating/uncontrolledRating";
 import {UncontrolledAccordion} from "./components/uncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
-import Selector from "./components/Selector/Selector";
+import {Example2} from "./components/useCallback.stories";
 
 function App() {
     let [collapsed, setCollapsed] = useState<boolean>(false)
@@ -18,6 +15,7 @@ function App() {
     const onClickFunction = (v: ValueType) => { setValue(v)}
     return (
         <div className={'App'}>
+            <Example2/>
             {/*<PageTitle title = {"This is APP component"}/>*/}
             {/*<PageTitle title ={"My friends"}/>*/}
             {/*Article 1*/}
